@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://bost.ocks.org/mike/d3/workshop/#135 -->
+<html style="margin-top: -55.5px; margin-bottom: -55.5px; height: 108605.5px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+<!--<base target="_blank">--><base href="." target="_blank">
+<!--<base>--><base href="." target="_blank">
+<style>
+
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
+@import url(style.css);
+@import url(chart.css);
+
+</style>
+</head><body class="overview" style="margin-top: -39.5px; margin-bottom: -39.5px; height: 108621.5px;">
+<script src="./files/d3.v2.min.js"></script>
+<script src="./files/chart.js"></script>
+
+<section>
+<h1 class="blue">D3 Overview</h1>
+<h2><a href="http://bost.ocks.org/mike/">Chris.Brooksbank@rm.com</a><div class="grey"><a href="http://tinyurl.com/pj4fuon">http://tinyurl.com/<span class="green">pj4fuon</span></a></div>
+    <audio controls>  
+  <source src="d3.mp3" type="audio/mpeg">  
+</audio>    
+</h2>
+<aside>Why should you consider using D3 on your current/next projects. DOWN ARROW for next slide.</p></aside>
+</section>
+
+<section>
+<ul>
+<li><a href="http://blog.visual.ly/why-d3-js-is-so-great-for-data-visualization/">The big picture</a></li>
+<li>D3 in action</li>
+<li>How D3 makes data visualisations easier</li>
+<li>Where to go next</li>
+<li><a href="http://tinyurl.com/orcyxtf">Click for Slide notes</a></li>
+
+</ul>
+
+<h2 class="green">D3 in 20 minutes</h2>
+</section>
+
+<section>
+<img src="files/d3website.png" alt="D3 website image">
+<h2 class="green"><a href="http://d3js.org/">http://d3js.org/</a></h2>
+</section>
+
+<section class="stack">
+<h1>D3 is <span class="blue">Open Source</span>.</h1>
+</section>
+
+<section class="stack">
+<h1>100% web standards. <span class="blue">No plugins</span></h1>
+<aside>Get that JSON into a data visualisation by chaining a few D3 method calls onto a D3 DOM selection</aside>
+</section>
+
+<section class="stack">
+<h1>Visualise any data understood by JavaScript. e.g. <span class="blue">JSON</span></h1>
+</section>
+
+<section class="stack">
+<h1>D3 was written by <span class="blue">Mike Bostock</span></h1>
+</section>
+
+<section class="stack">
+	<h1><span class="blue">JQuery</span> like selectors and method chaining.</h1>
+</section>
+
+<section>
+  <h1>Data loading is <span class="blue">Asynchronous</span></h1>
+  <aside>Use Enter(), Exit() and Update() functions to handle incoming data.</aside>
+</section>
+
+<section>
+  <h1>D3 works in <span class="blue">Node</span> as well as browsers</h1>
+  <aside>D3 server side graphics</aside>
+</section>
+
+<section>
+  <h1></span>Everything in D3 starts with a <span class="blue">selector</span></h1>
+</section>
+
+<section>
+<pre><code>
+// select all &lt;circle&gt; elements
+var circle = d3.selectAll("circle");
+
+// set some attributes and styles
+circle.attr("cx", 20);
+circle.attr("cy", 12);
+circle.attr("r", 24);
+circle.style("fill", "red");
+</code></pre>
+<p><h2 class="green">A simple selector</h2></p>
+<aside>Use Chrome Devtools to debug selectors.</aside>
+</section>
+
+<section class="stack">
+  <h1>Tons of chainable helper functions</h1>
+  <aside>
+  Scales, Axes, Layouts, Animations and transitions, loading data.
+  </aside>
+</section>
+
+<section>
+  <h2><span class="green">Helper functions</span></h2>
+  <p><span class="blue">Ranges</span> to map your data values onto the pixels available. Linear, Logarithmic e.t.c.</p>
+  <p><span class="blue">Axis</span>. how many tick marks do you want. Labelling. Define which shape to use for tick marks.</p>
+  <p><span class="blue">SVG</span> helpers. Easier generation of basic SVG shapes and paths.</p>
+  <p><span class="blue">Animations</span> and transitions. <code>D3.selectAll("foo"). foo(). transition().duration(5000) .foo() ..</code> . </p>
+  <aside>D3 has loads of helper functions</aside>
+
+</section>
+
+<section>
+  <h2><span class="green">More helper functions</span></h2>
+  <p><span class="blue">Interpolators</span> e.g. for numeric values, colours</p>
+  <p> <span class="blue">Layouts.</span>D3 layouts are algorithms which operate on data, not visually.</p>
+  <p><span class="blue">Event</span> handling e.g. mouseclicks</p>
+  <p>Simulated <span class="blue">physics</span></p>
+  <aside>More helper functions</aside>
+</section>
+
+<section>
+  <h2 class="green">Debugging</h2>
+  <p>D3 uses 100% web standards. So the best debugger is Chrome Devtools</p>
+  <img src="https://developers.google.com/chrome-developer-tools/images/slide8.jpg" alt="Chrome DevTools">
+</section>
+
+<section>
+    <h1>If you want to play with D3 without running a webserver, use <span class="blue"><a href="http://jsfiddle.net/gregfedorov/Qh9X5/9">JSFiddle</a></span></h1>    
+</section>
+
+<section>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <ul>
+    <li><a href="http://bost.ocks.org/mike/nations/"><span class="blue">Animated</span> : Wealth and Health of nations</a></li>
+    <li><a href="http://bost.ocks.org/mike/map/">Simple <span class="blue">map</span> Of UK</a></li>
+    <li><a href="http://nvd3.org/">Charts produced using a D3 plugin ( <span class="blue">NVD3</span> )</a></li>
+    <li><a href="http://bl.ocks.org/mbostock/4062045"><span class="blue">Physics</span> Demo</a></li>
+  </ul>
+
+<h2><span class="green">D3 in action</span></h2>
+<aside>A handful of examples. Theres a million more at <a href="https://github.com/mbostock/d3/wiki/Gallery">https://github.com/mbostock/d3/wiki/Gallery</a></aside>
+</section>
+
+<section>
+  <h2><span class="green">D3 in SPDP</span></h2>
+
+  <p>Most reports in SSRS + some bespoke data visualisations in D3. e.g. on DashBoard jumping into SSRS.</p>
+  <p>Heat maps using D3. UK map created using SVG, showing selected indicators on map.</p>
+
+  <a href="http://D32Y9W4J.internal.rmplc.net:333"><span class="blue">SPDP</span> first proof of concept</a>
+</section>
+
+
+
+<section class="stack">
+  <h2><span class="green">Scale</span></h2>
+  <ul>
+  <li><code>var x = d3.scale.linear().domain([12, 24]).range([0, 720]);</code></li>
+  <li><code>var x = d3.scale.log().domain(d3.extent(numbers)).range([0, 720]);</code></li>
+  <li><code>var x = d3.scale.linear().domain([12, 24]).range([0, 720]);x.ticks(5);</code></li>
+  <ul>
+  <aside>Scales are functions that map from data-space to visual-space.</aside>
+</section>
+
+<section>
+  <h2><span class="green">Axis</span></h2>
+
+  <code>var xAxis = d3.svg.axis().scale(xScale).orient("bottom");</code>
+  <code>svg.append("g").call(xAxis);</code>
+
+  <p><img src="files/axis.png" alt="Axis Picture"></p>
+</section>
+
+<section>
+  <h2><a href="http://nvd3.org/livecode/#codemirrorNav"><span class="green">nvd3 plugin makes charts easier</span></a> </h2>
+  <p><img src="files/nvd3.png" alt="nvd3 chart"></p>
+</section>
+
+<section>
+  <h2 class="green">SVG Helpers</h2>
+  <p><code>var line = d3.svg.line().x(function(d) { return d.x; }).y(function(d) { return d.y; }).interpolate("basis");</code></p>
+
+  <img src="https://github.com/mbostock/d3/wiki/line.png" alt="">
+
+  <p>By changing the interpolation, you can also generate splines and step functions.</p>
+
+  <aside>Generate SVG paths automatically</aside>
+</section>
+
+<section>
+  <h2 class="green"><a href="http://blog.visual.ly/creating-animations-and-transitions-with-d3-js/">Animations</a></h2>
+
+ <p class="blue">Lets create a square</p>
+
+ <p><code>var mySquare=d3.svg.append("rect")
+  .attr("x",60)
+  .attr("y",60)
+  .attr("width",60)
+  .attr("height",60);</code></p>
+
+ <p class="blue">Lets move the square to the right</p>
+
+<p>mySquare
+  .transition()
+  .duration(1000)
+  .attr("x",320);</p>
+</section>
+
+
+<section>
+  <h2 class="green">Layouts</h2>
+
+  <ul>
+<li>
+<a class="internal present" href="https://github.com/mbostock/d3/wiki/Bundle-Layout">Bundle</a> - apply Holten's <em>hierarchical bundling algorithm</em> to edges.</li>
+<li>
+<a class="internal present" href="https://github.com/mbostock/d3/wiki/Chord-Layout">Chord</a> - produce a chord diagram from a matrix of relationships.</li>
+<li>
+<a class="internal present" href="https://github.com/mbostock/d3/wiki/Cluster-Layout">Cluster</a> - cluster entities into a dendrogram.</li>
+<li>
+<a class="internal present" href="https://github.com/mbostock/d3/wiki/Force-Layout">Force</a> - position linked nodes using physical simulation.</li>
+<li>
+<a class="internal present" href="https://github.com/mbostock/d3/wiki/Hierarchy-Layout">Hierarchy</a> - derive a custom hierarchical layout implementation.</li>
+<li>
+<a class="internal present" href="https://github.com/mbostock/d3/wiki/Histogram-Layout">Histogram</a> - compute the distribution of data using quantized bins.</li>
+<li>
+<a class="internal present" href="https://github.com/mbostock/d3/wiki/Pack-Layout">Pack</a> - produce a hierarchical layout using recursive circle-packing.</li>
+<li>
+<a class="internal present" href="https://github.com/mbostock/d3/wiki/Partition-Layout">Partition</a> - recursively partition a node tree into a sunburst or icicle.</li>
+<li>
+<a class="internal present" href="https://github.com/mbostock/d3/wiki/Pie-Layout">Pie</a> - compute the start and end angles for arcs in a pie or donut chart.</li>
+<li>
+<a class="internal present" href="https://github.com/mbostock/d3/wiki/Stack-Layout">Stack</a> - compute the baseline for each series in a stacked bar or area chart.</li>
+<li>
+<a class="internal present" href="https://github.com/mbostock/d3/wiki/Tree-Layout">Tree</a> - position a tree of nodes tidily.</li>
+<li>
+<a class="internal present" href="https://github.com/mbostock/d3/wiki/Treemap-Layout">Treemap</a> - use recursive spatial subdivision to display a tree of nodes.</li>
+</ul>
+
+  <aside>Layouts are reusable algorithms that generate data, not display</aside>
+</section>
+
+<section> 
+ <image src="files/dcjs.png" alt=""></image>
+ <h2><span class="green"><a href="http://nickqizhu.github.io/dc.js/">DC.JS</a></span> is a very powerful D3 plugin</h2>
+ <aside>dc.js is a javascript charting library with native crossfilter support and allowing highly efficient exploration on large multi-dimensional dataset. The main objective of this project is to provide an easy yet powerful javascript library which can be utilized to perform data visualization and analysis in browser as well as on mobile device.</aside>
+</section>
+
+<section>
+  <h2><span class="green">More Information</span></h2>
+
+  <ul>
+    <li><a href="https://vimeo.com/35005701">D3 Video Tutorial</a></li>
+    <li><a href="http://vimeo.com/49741435">Tributary video tutorial - rapid online D3 prototyping</a></li>
+    <li><a href="https://github.com/mbostock/d3/wiki">WIKI</a></li>
+    <li><a href="https://groups.google.com/forum/#!forum/d3-js">Google Group</a></li>
+    <li><a href="http://bost.ocks.org/mike/d3/workshop/#0">Slideshow By Mike Bostock</a></li>    
+    <li><a href="https://github.com/mbostock/d3/wiki/Gallery">Examples</a></li>
+    <li><a href="https://github.com/mbostock/d3/wiki/API-Reference">API Reference</a></li>
+    <li><a href="http://blog.visual.ly/why-d3-js-is-so-great-for-data-visualization/">Blogpost on why D3 is great</a></li>    
+  </ul>
+
+  <p>Book : Interactive Data Visualization for the Web by Scott Murray</p>
+  <p>Book: Data Visualisation with D3.js Cookbook by Nick Qi Zhu</p>
+
+  <aside>THE END</aside>
+</section>
+
+
+<script src="./files/stack.v0.js"></script>
+<script src="./files/highlight.v0.js"></script>
+</body></html>
